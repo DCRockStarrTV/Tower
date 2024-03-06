@@ -56,6 +56,16 @@ public class MovingCube : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y, newZPosition);
 
         //Caida del bloque --
-        float cubeEdge =
+        float cubeEdge = transform.position.z + (newZSize / 2f);
+        float fallingBlockZposition = cubeEdge + fallingBlockSize / 2f;
+
+        SpawnDropCube(fallingBlockZposition, fallingBlockSize);
+    }
+
+    private void SpawnDropCube(float fallingBlockZposition, float fallingBlockSize)
+    {
+        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.localScale = new Vector3(transform.localScale.x, transform.position.y, fallingBlockSize);
+        cube.transform.localScale = new Vector3(transform.localScale.x, transform.position.y, fallingBlockSize);
     }
 }
