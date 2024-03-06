@@ -36,7 +36,7 @@ public class MovingCube : MonoBehaviour
     {
         transform.position += transform.forward * Time.deltaTime * moveSpeed;
     }
-
+    //Al click el cubo se detiene 
     private void Stop(InputAction.CallbackContext context)
     {
         moveSpeed = 0;
@@ -47,11 +47,15 @@ public class MovingCube : MonoBehaviour
 
     private void SplitCubeOnZ(float Sig)
     {
+        //Recorte del bloque -
         float newZSize = LastCube.transform.localScale.z - Mathf.Abs(Sig);
         float fallingBlockSize = transform.localScale.z - newZSize;
 
         float newZPosition = LastCube.transform.position.z + (Sig / 2);
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, newZSize);
         transform.position = new Vector3(transform.position.x, transform.position.y, newZPosition);
+
+        //Caida del bloque --
+        float cubeEdge =
     }
 }
