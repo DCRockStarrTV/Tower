@@ -1,0 +1,34 @@
+{
+    "name": "Actions",
+    "maps": [
+        {
+            "name": "Cubitos",
+            "id": "09aa2537-4122-4de3-abf1-8a5a646aadc8",
+            "actions": [
+                {
+                    "name": "Stop",
+                    "type": "Button",
+                    "id": "c2e21550-d92d-49c4-9e92-3a369d98f10e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "38f23f3c-87c5-4088-9a6d-8c1c1c7f2711",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Stop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
